@@ -24,6 +24,8 @@ int drawingsTraining = 8;
 
 PImage drawIcon;
 PImage guessIcon;
+PImage titleLogo;
+
 
 PFont f;
 
@@ -108,6 +110,7 @@ void setup() {
   //load icons
   drawIcon = loadImage("draw.png");
   guessIcon = loadImage("guess.png");
+  titleLogo = loadImage("titleLogo.png");
 
 
   size(800, 600, P2D);
@@ -198,6 +201,7 @@ void trainingInstructions() {
   pushStyle();
   background(255);
   //instructions
+  image(titleLogo, width/2 - titleLogo.width/2, 40);
   fill(0);
   textAlign(CENTER, CENTER);
   textSize(15);
@@ -216,6 +220,7 @@ void trainingInstructions() {
 
 void drawSelectionPage() {
   background(255);
+  image(titleLogo, width/2 - titleLogo.width/2, 40);
 
   float icon1XPos = (width/2 - drawIcon.width)/2;
   float icon2XPos = (width/2 - drawIcon.width)/2 + width/2;
@@ -268,7 +273,7 @@ void drawSelectionPage() {
     textAlign(CENTER, CENTER);
     fill(0);
     textSize(25);
-    text("MAKE YOUR CHOICE!", width/2, 70);
+    text("MAKE YOUR CHOICE!", width/2, 150);
     popStyle();
   }
 }
