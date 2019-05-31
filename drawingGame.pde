@@ -113,7 +113,8 @@ void setup() {
   titleLogo = loadImage("titleLogo.png");
 
 
-  size(800, 600, P2D);
+  //size(800, 600, P2D);
+  fullScreen();
 
   /* start oscP5, listening for incoming messages at port 12000 */
   oscP5 = new OscP5(this, 12000);
@@ -589,9 +590,11 @@ void timerBar() {
   popStyle();
 }
 
+///////--------------MOUSE MOVED-------------------///////
 
 void mouseMoved() {
   vectorModel.mouseMov();
+  println(vectorModel.selectedPoint.x, vectorModel.selectedPoint.y);
 }
 
 ///////--------------MOUSE PRESSED-------------------///////
@@ -909,8 +912,7 @@ void writeJSON() {
 
     drawingJ.setJSONArray("timeBeforeDrawing", timeBeforeDrawingJ);
     drawingJ.setJSONArray("timeDrawing", timeDrawingJ);
-  
-}
+  }
 
 
   if (page == 2 || page == 102) {

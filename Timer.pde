@@ -1,7 +1,6 @@
 class Timer {
 
 
-AudioSample startSound;
 AudioSample endSound;
 
   int startTime = 0;
@@ -10,7 +9,6 @@ AudioSample endSound;
   boolean bEnded = false;
 
   Timer() {
-    startSound = minim.loadSample( "startSound.mp3", 512);
     endSound = minim.loadSample( "endSound.mp3", 512);
   }
 

@@ -78,8 +78,8 @@ class VectorModel {
 
     if (mouseX <= w + xx && mouseX >= xx && mouseY<= h + yy && mouseY >= yy) {
       bError= false;
-      selectedPoint.x = constrain(map(selectedPoint.x, 0, 500, -1, 1), -1, 1);
-      selectedPoint.y = constrain(map(selectedPoint.y, 0, 500, 1, -1), -1, 1);
+      selectedPoint.x = map(selectedPoint.x, xx, w + xx, -1, 1);
+      selectedPoint.y = map(selectedPoint.y, yy, h + yy, 1, -1);
     } else {
 
       bError = true;
@@ -95,8 +95,8 @@ class VectorModel {
 
     if (mouseX <= w + xx && mouseX >= xx && mouseY<= h + yy && mouseY >= yy) {
       bError= false;
-      selectedPoint.x = constrain(map(selectedPoint.x, 0, 500, -1, 1), -1, 1);
-      selectedPoint.y = constrain(map(selectedPoint.y, 0, 500, 1, -1), -1, 1);
+      selectedPoint.x = map(selectedPoint.x, xx, w + xx, -1, 1);
+      selectedPoint.y = map(selectedPoint.y, yy, h + yy, 1, -1);
       bDone = true;
     } else {
 
